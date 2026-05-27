@@ -211,6 +211,73 @@ body {
   }
 
   .center-balloon {
-    display: none;
-  }
+    display: /* THEME TOGGLE BUTTON */
+
+.theme-toggle {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ff1670;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.theme-toggle i {
+  color: white;
+  font-size: 22px;
+}
+
+/* LIGHT MODE */
+
+body.light-mode {
+  background: linear-gradient(135deg, #ffe6f0, #f6f8ff);
+  color: #222;
+}
+
+body.light-mode .login-card {
+  background: rgba(255,255,255,0.92);
+  color: #222;
+}
+
+body.light-mode .login-card p,
+body.light-mode .register-text,
+body.light-mode .terms {
+  color: #444;
+}
+
+body.light-mode .input-box {
+  background: #edf1f7;
+}
+
+body.light-mode .input-box input {
+  color: #222;
+}
+
+body.light-mode .input-box input::placeholder {
+  color: #666;
+}
+
+body.light-mode .input-box i {
+  color: #666;
+}
+
+body.light-mode .couple-img {
+  filter: drop-shadow(0 0 18px rgba(120,120,120,0.25));
+}
+
+body.light-mode .theme-toggle {
+  background: #222;
 }
