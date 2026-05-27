@@ -238,3 +238,22 @@
 
 </body>
 </html>
+<script>
+  const toggleTheme = () => {
+    document.body.classList.toggle("light-mode");
+
+    const btn = document.getElementById("themeIcon");
+
+    if (document.body.classList.contains("light-mode")) {
+      btn.classList.remove("bi-moon-stars-fill");
+      btn.classList.add("bi-brightness-high-fill");
+    } else {
+      btn.classList.remove("bi-brightness-high-fill");
+      btn.classList.add("bi-moon-stars-fill");
+    }
+  };
+</script>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+  <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+</div>
